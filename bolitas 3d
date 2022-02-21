@@ -1,0 +1,26 @@
+PImage foto1;
+
+void setup() {
+  size (600, 800, P3D);
+  foto1 = loadImage ("kuromi.png");
+}
+
+
+void draw (){
+background (0);
+//image (foto1,0,0);
+for (int cuenta = 0 ; cuenta < 5; cuenta ++){
+push();
+translate (100*cuenta +100, height/2 ,0);
+rotateX (mouseX*0.05); 
+sphereDetail(cuenta+5);
+fill(60*cuenta,15*cuenta,85);
+stroke(255,50);
+//sphere (30);
+sphere (map(mouseX,0,width,50,100));
+
+pop();
+  
+}
+
+}
